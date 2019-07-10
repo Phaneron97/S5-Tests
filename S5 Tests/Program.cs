@@ -11,12 +11,23 @@ namespace S5_Tests
     {
         static void Main(string[] args)
         {
-            string text = "Hello World";
+            //array for all texts
+            string[] text = new string[3];
 
-            text = String.Join(" ", text.Split(' ').Reverse());
+            text[0] = "Hello World";
+            text[1] = "Bye World";
+            text[2] = "Useless World";
+            
+            for (int i = 0; i <3; i++)
+            {
+                //get string from textarray, split through space and reverse words
+                text[i] = String.Join(" ", text[i].Split(' ').Reverse());
 
-            Console.WriteLine(text);
-            Console.ReadLine();
+                Console.WriteLine(text[i]);
+            }
+
+            //prevent immediate shutdown
+            Console.ReadKey();
         }
     }
 }
